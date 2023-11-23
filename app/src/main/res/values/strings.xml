@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Yusay Hub</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_leave_request">LeaveRequestActivity</string>
+    <string name="tab_admitted">Admitted</string>
+    <string name="tab_discharged">Discharged</string>
+    <string name="title_activity_nurse_main">NurseMainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="transactions">Transactions</string>
+    <string name="analysis">Analysis</string>
+    <string name="categories">Categories</string>
+</resources>
