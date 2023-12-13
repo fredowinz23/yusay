@@ -1,7 +1,9 @@
 package com.capstone.yusayhub.api
 
+import com.capstone.yusayhub.models.User
 import com.capstone.yusayhub.request.AuthRequest
 import com.capstone.yusayhub.request.JoinProgramRequest
+import com.capstone.yusayhub.request.ProfileDetailRequest
 import com.capstone.yusayhub.request.ProgramListRequest
 import retrofit2.Call
 import retrofit2.http.Body
@@ -33,5 +35,13 @@ interface ApiInterface {
     @Headers("Content-Type: application/json")
     @POST("api/get-joined-programs.php")
     fun getJoinedPrograms(@Body programListRequest: ProgramListRequest): Call<ProgramListRequest>
+
+    @Headers("Content-Type: application/json")
+    @POST("api/get-profile.php")
+    fun getProfileDetail(@Body profileDetailRequest: ProfileDetailRequest): Call<ProfileDetailRequest>
+
+    @Headers("Content-Type: application/json")
+    @POST("api/update-profile-detail.php")
+    fun updateProfileDetail(@Body user: User): Call<User>
 
 }

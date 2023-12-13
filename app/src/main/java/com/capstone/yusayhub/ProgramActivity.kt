@@ -33,13 +33,13 @@ class ProgramActivity : AppCompatActivity()  {
         getPrograms()
 
         if (programType=="allPrograms"){
-            binding.cvOutreach.visibility = View.VISIBLE
+            binding.tvTitle.text = "Events"
         }
         if (programType=="joinedPrograms"){
-            binding.cvJoined.visibility = View.VISIBLE
+            binding.tvTitle.text = "Joined Future Events"
         }
         if (programType=="historyPrograms"){
-            binding.cvHistory.visibility = View.VISIBLE
+            binding.tvTitle.text = "History"
         }
 
         binding.ivBack.setOnClickListener {

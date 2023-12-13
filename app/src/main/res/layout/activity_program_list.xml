@@ -24,96 +24,17 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_gravity="center"
+                android:text="Outreach"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:visibility="gone"
-            android:id="@+id/cvOutreach"
-            android:layout_margin="10dp"
-            android:elevation="10dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/outreach"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:text="Outreach"
-                    android:textSize="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:visibility="gone"
-            android:id="@+id/cvJoined"
-            android:layout_margin="10dp"
-            android:elevation="10dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/joiner"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:text="Joined OutReach"
-                    android:textSize="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:visibility="gone"
-            android:id="@+id/cvHistory"
-            android:layout_margin="10dp"
-            android:elevation="10dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/history"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:text="History"
-                    android:textSize="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
 
 
         <androidx.recyclerview.widget.RecyclerView

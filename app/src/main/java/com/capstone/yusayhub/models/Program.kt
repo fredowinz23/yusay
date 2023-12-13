@@ -36,4 +36,10 @@ data class Program(
     @SerializedName("status")
     var status: String = "",
 
+    @SerializedName("image")
+    var image: String = "",
+
+    @SerializedName("totalJoiner")
+    var totalJoiner: Int = 0,
+
 )

@@ -15,9 +15,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".TestMainActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.Yusay.NoActionBar.NoActionBar" />
@@ -43,6 +40,7 @@
         <activity
             android:name=".ProgramActivity"
             android:exported="false" />
+        <activity android:name=".ProfileActivity" />
     </application>
 
 </manifest>

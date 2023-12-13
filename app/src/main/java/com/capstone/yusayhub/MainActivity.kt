@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("programType", "historyPrograms")
             startActivity(intent)
         }
+        binding.cvProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -18,6 +18,9 @@ data class User(
     @SerializedName("phone")
     var phone: String = "",
 
+    @SerializedName("email")
+    var email: String = "",
+
     @SerializedName("status")
     var status: String = "",
 
