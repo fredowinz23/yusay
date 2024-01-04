@@ -2,6 +2,7 @@ package com.capstone.yusayhub
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,9 +13,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.yusayhub.models.Program
 import com.squareup.picasso.Picasso
+import java.io.Serializable
 
 class ProgramAdapter(private var context: Context?, private val mList: List<Program>) : RecyclerView.Adapter<ProgramAdapter.ViewHolder>() {
 
+    var programType: String = ""
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,15 +36,26 @@ class ProgramAdapter(private var context: Context?, private val mList: List<Prog
 
         holder.title.text = item.title
         holder.joiners.text = "Joiners: " + item.totalJoiner.toString()
-        holder.description.text = item.description
         holder.address.text = "@" + item.address
         holder.dateTime.text = "${item.date} at ${item.time}"
         Picasso.with(context).load(item.image).fit().centerCrop()
             .placeholder(R.drawable.logo)
             .error(R.drawable.logo)
             .into(holder.imageView)
+//        holder.item.setOnClickListener {
+//            (context as ProgramActivity).checkDialog(item.id, item.description)
+//        }
         holder.item.setOnClickListener {
-            (context as ProgramActivity).checkDialog(item.id, item.description)
+            val intent = Intent(context, ProgramDetailActivity::class.java)
+            intent.putExtra("id", item.id)
+            intent.putExtra("title", item.title)
+            intent.putExtra("joiners", "Joiners: " + item.totalJoiner.toString())
+            intent.putExtra("description", item.description)
+            intent.putExtra("address", item.address)
+            intent.putExtra("dateTime", "${item.date} at ${item.time}")
+            intent.putExtra("image", item.image)
+            intent.putExtra("programType", programType)
+            context?.startActivity(intent)
         }
 
     }
@@ -54,7 +68,6 @@ class ProgramAdapter(private var context: Context?, private val mList: List<Prog
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val address: TextView = itemView.findViewById(R.id.tvAddress)
-        val description: TextView = itemView.findViewById(R.id.tvDescription)
         val title: TextView = itemView.findViewById(R.id.tvTitle)
         val dateTime: TextView = itemView.findViewById(R.id.tvDateTime)
         val joiners: TextView = itemView.findViewById(R.id.tvJoiners)

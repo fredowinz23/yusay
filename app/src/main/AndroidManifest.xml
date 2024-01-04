@@ -41,6 +41,7 @@
             android:name=".ProgramActivity"
             android:exported="false" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProgramDetailActivity" />
     </application>
 
 </manifest>

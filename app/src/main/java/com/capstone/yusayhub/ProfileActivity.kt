@@ -64,6 +64,12 @@ class ProfileActivity : AppCompatActivity() {
             override fun onResponse(call: Call<User?>, response: Response<User?>) {
 
                 val responseFromAPI: User? = response.body()
+                finish()
+                Toast.makeText(
+                        this@ProfileActivity,
+                "Profile Updated Successfully",
+                Toast.LENGTH_LONG
+                ).show()
 
             }
 

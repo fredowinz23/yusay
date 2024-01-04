@@ -12,69 +12,53 @@
 
     <LinearLayout
         android:id="@+id/llItem"
-        android:layout_margin="10dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:src="@drawable/logo"
             android:id="@+id/ivImage"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
-
+            android:layout_weight=".3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_weight=".7"
+            android:layout_width="0dp"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tvJoiners"
-                android:text="Program:"
-                android:layout_weight=".5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/tvDateTime"
                 android:text="Program:"
-                android:gravity="end"
-                android:layout_width="0dp"
-                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Description:"
+                android:textColor="@color/Main"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:text="Program:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tvJoiners"
+                android:text="Program:"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
-        <View
-            android:background="@color/gray"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"/>
-
-        <TextView
-            android:id="@+id/tvTitle"
-            android:text="Description:"
-            android:textColor="@color/Main"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tvDescription"
-            android:gravity="center"
-            android:text="Program:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tvAddress"
-            android:text="Program:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

@@ -47,6 +47,11 @@ class ProgramActivity : AppCompatActivity()  {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        getPrograms()
+    }
+
     private fun getPrograms() {
         val retrofit = RetrofitClient.getInstance(this)
         val retrofitAPI = retrofit.create(ApiInterface::class.java)
@@ -79,6 +84,7 @@ class ProgramActivity : AppCompatActivity()  {
                 val data = responseFromAPI?.program_list!!
 
                 val adapter = ProgramAdapter(this@ProgramActivity, data)
+                adapter.programType = programType
                 binding.rvList.adapter = adapter
             }
 
@@ -108,6 +114,13 @@ class ProgramActivity : AppCompatActivity()  {
 
                 val responseFromAPI: JoinProgramRequest? = response.body()
 
+                if (responseFromAPI?.response =="reachedMaxVolunteer"){
+                    Toast.makeText(
+                        this@ProgramActivity,
+                        "Max Volunteers Reached",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
                 if (responseFromAPI?.response =="alreadyJoined"){
                     Toast.makeText(
                         this@ProgramActivity,
@@ -193,8 +206,6 @@ class ProgramActivity : AppCompatActivity()  {
         }
 
         builder.setNegativeButton("No") { dialog, which ->
-            Toast.makeText(this,
-                android.R.string.no, Toast.LENGTH_SHORT).show()
         }
 
         builder.show()
@@ -209,8 +220,6 @@ class ProgramActivity : AppCompatActivity()  {
         }
 
         builder.setNegativeButton("No") { dialog, which ->
-            Toast.makeText(this,
-                android.R.string.no, Toast.LENGTH_SHORT).show()
         }
 
         builder.show()
